@@ -1,0 +1,104 @@
+@use "sass:color";
+.contact-section {
+  height: calc(100vh - $navbarHeight - 50px);
+  color: $secondary-text-color;
+  @include displayFlexRow;
+  background-color: $light-text-color;
+  background-image: linear-gradient(
+      90deg,
+      rgba(256, 256, 256, 0.95) 40%,
+      rgba(256, 256, 256, 0.6) 60%,
+      rgba(256, 256, 256, 0.5) 100%,
+      transparent 90%
+    ),
+    url(../images/contact-bg.jpg);
+
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contact-form {
+  @include displayFlexRow;
+  flex-direction: column;
+  text-align: center;
+  label {
+    position: absolute;
+    display: inline-block;
+    left: -200000px;
+  }
+  button {
+    margin: 10px 30px;
+
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid $light-text-color;
+    padding: 10px 20px;
+    max-width: 8em;
+    @include linkHover;
+    &:hover {
+      border-color: $secondary-bg-color;
+    }
+  }
+}
+.form-row {
+  @include displayFlexRow;
+  width: 100%;
+  input {
+    &::placeholder {
+      @include homeText;
+      font-size: 1.5rem;
+      color: $secondary-text-color;
+    }
+    min-width: calc(50% - 10px);
+    display: inline-block;
+    border: 2px solid color.adjust($secondary-text-color, $alpha: -0.7);
+    background-color: transparent;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin: 10px 10px;
+    color: $secondary-text-color;
+    font-size: 20px;
+  }
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%) contrast(30%);
+  }
+
+  textarea {
+    &::placeholder {
+      @include homeText;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.5rem;
+      color: $secondary-text-color;
+    }
+    padding: 20px 30px;
+    width: 100%;
+    border: 2px solid color.adjust($secondary-text-color, $alpha: -0.7);
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 10px 0px;
+    color: $secondary-text-color;
+    font-size: 20px;
+    resize: vertical;
+    min-height: 200px;
+    max-height: 400px;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color, box-shadow $reallyLongTime ease-in-out 0s;
+  }
+}
+.contact-links {
+  text-decoration: none;
+  color: $secondary-text-color;
+  font-size: 30px;
+  margin: 20px;
+  @include linkHover;
+}

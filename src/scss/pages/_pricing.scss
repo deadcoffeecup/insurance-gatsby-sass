@@ -1,0 +1,53 @@
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  .pricing-section-title {
+    font-size: 50px;
+  }
+}
+.pricing-articles-ctn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.pricing-article {
+  color: $secondary-text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: $light-text-color;
+  height: 420px;
+  margin: 30px;
+  .pricing-article-title {
+    color: $primary-bg-color;
+    font-size: 30px;
+  }
+  .pricing-article-subtitle {
+  }
+  .pricing-article-price {
+  }
+  .pricing-article-try-button {
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    background-color: $primary-color;
+    border-radius: 5px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  .pricing-article-features-list {
+    list-style: none;
+  }
+  .feature-list-el {
+    margin: 20px;
+  }
+}

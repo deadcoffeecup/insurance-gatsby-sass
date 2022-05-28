@@ -1,0 +1,43 @@
+.home-section {
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 10%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 90%
+    ),
+    url(../images/bg-image.jpg);
+
+  background-position: center;
+  background-size: cover;
+  @include displayFlexRow;
+  justify-content: flex-start;
+  height: calc(100vh - $navbarHeight - 50px);
+}
+.section-ctn {
+  max-width: 45em;
+  h1 {
+    @include homeText;
+    font-size: 4em;
+  }
+  h2 {
+    margin-bottom: 30px;
+    @include homeText;
+    font-size: 1em;
+  }
+  .home-button-find {
+    text-decoration: none;
+    @include homeText;
+    display: flex;
+    margin-left: auto;
+    margin-right: 2em;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid $light-text-color;
+    padding: 10px 20px;
+    max-width: 8em;
+    @include linkHover;
+    &:hover {
+      border-color: $secondary-bg-color;
+    }
+  }
+}

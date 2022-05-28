@@ -1,0 +1,23 @@
+@mixin displayFlexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin primaryFont {
+  color: $light-text-color;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+@mixin homeText {
+  color: $light-text-color;
+  margin-left: 10rem;
+  text-transform: capitalize;
+}
+@mixin linkHover {
+  transition: 1s;
+  &:hover {
+    color: $secondary-bg-color;
+  }
+}

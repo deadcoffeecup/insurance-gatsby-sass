@@ -1,0 +1,49 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+@import "pages/_navbar.scss";
+@import "pages/_home.scss";
+@import "pages/_contact.scss";
+@import "pages/_products.scss";
+@import "pages/_pricing.scss";
+@import "pages/_footer.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  &:focus {
+    outline: 1px solid rgba($color: #252b42, $alpha: 0.3);
+  }
+}
+a:focus {
+  outline: none;
+  border: none;
+}
+
+body {
+  @include primaryFont;
+  background-color: $primary-bg-color;
+}
+.section {
+  margin-top: $navbarHeight;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  height: calc(100vh - $navbarHeight - 50px);
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+.section-ctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

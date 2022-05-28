@@ -1,0 +1,37 @@
+.products-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products-ctn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #fff;
+}
+.product {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  h3 {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+}
+@each $product in archive, bag-plus, briefcase, file-earmark-bar-graph,
+  fingerprint, house-door, mortarboard, piggy-bank
+{
+  .#{$product}-icon {
+    mask: url("../images/#{$product}.svg") no-repeat 50% 50%;
+    mask-size: cover;
+    height: 50px;
+    width: 50px;
+    background-color: $primary-color;
+  }
+}
